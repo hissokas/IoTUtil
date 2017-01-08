@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_detail"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.kirkcola.iotutils.Fragment_Detail"
+    >
+
+                <TextView
+                    android:id="@+id/txtIoTIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:text="IoT Kit IP地址"
+                    android:textSize="@dimen/titleSize"
+                    />
+
+                <TextView
+                    android:id="@+id/valueIoTIPandPort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBaseline="@+id/txtIoTIP"
+                    android:text="0.0.0.0:0"
+                    android:textSize="@dimen/itemSize" />
+
+
+                <TextView
+                    android:id="@+id/txtIoTNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:text="IoT Kit 编号"
+                    android:layout_below="@+id/txtIoTIP"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/valueIoTNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/txtIoTNum"
+                    android:layout_alignBaseline="@+id/txtIoTNum"
+                    android:text="0"
+                    android:textSize="@dimen/itemSize" />
+
+                <TextView
+                    android:id="@+id/txtHeartbeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtIoTNum"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:paddingBottom="@dimen/padding_item_title"
+                    android:text="心跳数"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/valueHeartbeat"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentEnd="true"
+                    android:text="0"
+                    android:layout_toEndOf="@id/txtHeartbeat"
+                    android:layout_alignBaseline="@id/txtHeartbeat"
+                    android:textSize="@dimen/itemSize"
+                    android:layout_width="match_parent" />
+
+                <View
+                    android:id="@+id/div_stat_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_below="@+id/txtHeartbeat"
+                    android:background="#DDDDDDDD" />
+
+                <TextView
+                    android:id="@+id/txtIR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/div_stat_control"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:text="红外开关"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/valueIRStatus"
+                    android:layout_toEndOf="@id/txtIR"
+                    android:layout_alignBaseline="@id/txtIR"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_alignParentEnd="true"
+                    android:text="0"
+                    android:textSize="@dimen/itemSize"
+                    android:layout_width="match_parent" />
+
+                <TextView
+                    android:id="@+id/txtHumTmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtIR"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:text="温湿度"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/valueHumTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtHumTmp"
+                    android:layout_alignBaseline="@id/txtHumTmp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:paddingTop="@dimen/padding_title_item"
+                    android:text="T:0/H:0"
+                    android:textSize="@dimen/itemSize" />
+
+                <!--LED-->
+                <TextView
+                    android:id="@+id/txtLED"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtHumTmp"
+                    android:text="LED"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/statLED"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/txtLED"
+                    android:layout_alignBaseline="@id/txtLED"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textSize="@dimen/itemSize" />
+
+                <!--RGB -->
+
+                <TextView
+                    android:id="@+id/txtRGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtLED"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:text="RGB:"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/colorDisplay"
+                    android:layout_width="@dimen/titleSize"
+                    android:layout_height="@dimen/titleSize"
+                    android:layout_alignBaseline="@id/txtRGB"
+                    android:layout_gravity="right"
+                    android:text="  "
+                    android:background="#000000"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="@dimen/itemSize" />
+
+
+
+                <!--Motor-->
+                <TextView
+                    android:id="@+id/txtMotor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRGB"
+                    android:paddingTop="@dimen/padding_item_title"
+                    android:text="马达:"
+                    android:textSize="@dimen/titleSize" />
+
+                <TextView
+                    android:id="@+id/valueMotorSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtMotor"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:layout_alignBaseline="@id/txtMotor"
+                    android:text="0"
+                    android:textSize="@dimen/itemSize" />
+
+
+            </RelativeLayout>
